@@ -1,6 +1,21 @@
-// fronted vanila js
+// fronted vanilla js
+
 
 const socket=io();
+ 
+socket.on('connect', () => {
+  console.log('Connected to Socket.IO');
+});
+
+socket.on('disconnect', () => {
+  console.log('Disconnected from Socket.IO');
+});
+
+socket.on('error', (error) => {
+  console.error('Socket.IO error:', error);
+  console.log(error);
+  
+});
 
 if(navigator.geolocation){
     navigator.geolocation.watchPosition(
@@ -10,6 +25,8 @@ if(navigator.geolocation){
     },
     (error)=>{
         console.error(error);
+        console.log(error);
+        
     },
     {
         enableHighAccuracy:true,
@@ -17,6 +34,8 @@ if(navigator.geolocation){
         maximumAge:0
     }
      );
+    
+     
 }
 
   
