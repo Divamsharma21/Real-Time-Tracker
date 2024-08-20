@@ -1,4 +1,5 @@
-// fronted vanila js
+// fronted vanilla js
+
 
 const socket=io();
  
