@@ -12,6 +12,8 @@ socket.on('disconnect', () => {
 
 socket.on('error', (error) => {
   console.error('Socket.IO error:', error);
+  console.log(error);
+  
 });
 
 if(navigator.geolocation){
@@ -22,6 +24,8 @@ if(navigator.geolocation){
     },
     (error)=>{
         console.error(error);
+        console.log(error);
+        
     },
     {
         enableHighAccuracy:true,
@@ -29,6 +33,8 @@ if(navigator.geolocation){
         maximumAge:0
     }
      );
+    
+     
 }
 
   
