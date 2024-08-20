@@ -1,6 +1,18 @@
 // fronted vanila js
 
 const socket=io();
+ 
+socket.on('connect', () => {
+  console.log('Connected to Socket.IO');
+});
+
+socket.on('disconnect', () => {
+  console.log('Disconnected from Socket.IO');
+});
+
+socket.on('error', (error) => {
+  console.error('Socket.IO error:', error);
+});
 
 if(navigator.geolocation){
     navigator.geolocation.watchPosition(
